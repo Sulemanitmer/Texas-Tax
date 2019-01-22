@@ -1,0 +1,37 @@
+// Suleman Itmer
+// This program calculates the total price which includes sales tax
+
+import java.util.Scanner;
+
+public class SalesTax
+{
+	public static void main( String[]args )
+	{
+		//identifiers declaration
+		final double TAX_RATE = 0.0825; // 8.25%
+		double price, tax, total;
+		String item;
+
+		//create a Scanner object to read from the keyboard
+		Scanner Keyboard = new Scanner (System.in);
+
+		//Prompt the user and get input
+		System.out.print ("Item desscription: ");
+		item = Keyboard.nextLine();
+
+		System.out.print("Item Price: ");
+		price = Keyboard.nextDouble();
+
+		//calculations
+		tax = (price * (TAX_RATE * 100)) / 100 ;
+		total = price + tax;
+
+		//display
+		System.out.print( item + " $");
+		System.out.println (price);
+		System.out.print ("Tax $");
+		System.out.println (tax);
+		System.out.print("Total $");
+		System.out.print(total);
+	}
+}
